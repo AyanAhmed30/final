@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&b_rrh(@gw(u@gec%a@+p6*gwk3m)rr(mt=uj=i)&=e#e^5-%2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app', 'your-custom-domain.com', '127.0.0.1']
 
@@ -122,12 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'djangoGEE', 'static'),  # Adjusted to match your static folder location
-]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')  # Location for static files during production
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'djangoGEE', 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
 
 # Authentication Redirect URLs

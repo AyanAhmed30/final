@@ -8,10 +8,6 @@
         "runtime": "python3.12",
         "maxLambdaSize": "15mb"
       }
-    },
-    {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build"
     }
   ],
   "routes": [
