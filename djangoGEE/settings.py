@@ -53,12 +53,12 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'djangoGEE.urls'
 
 # Templates Directory Setup
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'djangoGEE', 'templates')
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'djangoGEE', 'template')
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'djangoGEE/template')],
+        'DIRS': [os.path.join(BASE_DIR, 'djangoGEE', 'template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,6 +70,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'djangoGEE.wsgi.application'
 
@@ -130,3 +131,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 LOGOUT_REDIRECT_URL = 'index'  # Redirect to index page after logout
 LOGIN_REDIRECT_URL = 'index'   # Redirect to index page after login
 LOGIN_URL = 'login'  # Login page URL
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+

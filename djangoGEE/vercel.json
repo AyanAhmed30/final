@@ -2,12 +2,9 @@
   "version": 2,
   "builds": [
     {
-      "src": "djangoGEE/wsgi.py",
+      "src": "manage.py",
       "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.12",
-        "maxLambdaSize": "15mb"
-      }
+      "config": { "maxLambdaSize": "50mb" }
     }
   ],
   "routes": [
@@ -16,8 +13,12 @@
       "dest": "/static/$1"
     },
     {
+      "src": "/media/(.*)",
+      "dest": "/media/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "djangoGEE/wsgi.py"
+      "dest": "/djangoGEE/template/$1"
     }
   ]
 }
