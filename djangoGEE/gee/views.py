@@ -57,10 +57,14 @@ from datetime import datetime
 
 # D:\Desktop\Django_app_12_sep-2023\gee\ee-muzzamil.json
 
+# djangoGEE/gee/views.py
+from django.shortcuts import render
+
+# djangoGEE/gee/views.py
+from django.shortcuts import render
+
 def index(request):
-    
-    print("I am in index")
-    return render (request, "index.html")
+    return render(request, 'index.html')
 
 # ee.Initialize()
 @csrf_exempt
